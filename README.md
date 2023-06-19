@@ -31,18 +31,21 @@ The Lending Club dataset is a large dataset with a great deal of information abo
 
 ### Logistic Regression Model
 
+#### Train Classification Report
 <img style="display: block;
             margin-left: auto;
             margin-right: auto;
             width: 50%;"
      src="images/log_train_class_rep.jpg" />
-     
+
+#### Test Classification Report
 <img style="display: block;
             margin-left: auto;
             margin-right: auto;
             width: 50%;"
      src="images/log_test_class_rep.jpg" />
-     
+
+#### Important Features
 <img style="display: block;
             margin-left: auto;
             margin-right: auto;
@@ -51,18 +54,21 @@ The Lending Club dataset is a large dataset with a great deal of information abo
      
 ### Random Forest Model
 
+#### Train Classification Report
 <img style="display: block;
             margin-left: auto;
             margin-right: auto;
             width: 50%;"
      src="images/rf_train_class_rep.jpg" />
-     
+
+#### Test Classification Report
 <img style="display: block;
             margin-left: auto;
             margin-right: auto;
             width: 50%;"
      src="images/rf_test_class_rep.jpg" />
-     
+
+#### Important Features
 <img style="display: block;
             margin-left: auto;
             margin-right: auto;
@@ -71,18 +77,21 @@ The Lending Club dataset is a large dataset with a great deal of information abo
      
 ### XGBoost Model
 
+#### Train Classification Report
 <img style="display: block;
             margin-left: auto;
             margin-right: auto;
             width: 50%;"
      src="images/xgb_train_class_rep.jpg" />
-     
+
+#### Test Classification Report
 <img style="display: block;
             margin-left: auto;
             margin-right: auto;
             width: 50%;"
      src="images/xgb_test_class_rep.jpg" />
-     
+
+#### Important Features     
 <img style="display: block;
             margin-left: auto;
             margin-right: auto;
