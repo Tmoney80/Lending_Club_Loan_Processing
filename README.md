@@ -27,6 +27,30 @@ Determining which customers to lend financial resources to is key to the Lending
 The Lending Club dataset is a large dataset with a great deal of information about borrowers and their loan statuses. The dataset contains hundreds of thousands to millions of records distributed across over 150 features.  For the purposes of this project, we will only be using roughly 50,000 records and selecting the most influential 30 or so features. After preparing our data for modeling we'll then use three different models on our dataset. The model with the best performance will be used to make recommendations to our client, the Lending Club.
 </p>
 
+## Exploratory Data Analysis
+
+#### Target Distribution
+<img style="display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 50%;"
+     src="images/targ_dist.jpg" />
+     
+#### Heatmap of Target and Numerical Features
+<img style="display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 50%;"
+     src="images/heatmap.jpg" />
+     
+#### Pair Plot of Target and Top Ten Correlated Features
+<img style="display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 50%;"
+     src="images/pairplot.png" />
+     
+
 ## Modeling
 
 ### Logistic Regression Model
@@ -52,6 +76,13 @@ The Lending Club dataset is a large dataset with a great deal of information abo
             width: 50%;"
      src="images/log_imp_feats.jpg" />
      
+#### Confusion Matrix
+<img style="display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 50%;"
+     src="images/log_cm.jpg" />     
+     
 ### Random Forest Model
 
 #### Train Classification Report
@@ -74,6 +105,13 @@ The Lending Club dataset is a large dataset with a great deal of information abo
             margin-right: auto;
             width: 50%;"
      src="images/rf_imp_feats.jpg" /> 
+     
+#### Confusion Matrix
+<img style="display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 50%;"
+     src="images/rf_cm.jpg" /> 
      
 ### XGBoost Model
 
@@ -98,16 +136,45 @@ The Lending Club dataset is a large dataset with a great deal of information abo
             width: 50%;"
      src="images/xgb_imp_feats.jpg" /> 
      
-## Results & Recommendations
+#### Confusion Matrix
+<img style="display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 50%;"
+     src="images/xgb_cm.jpg" /> 
+     
+## Modeling Conclusions
 
 <p style="text-align: left;"> 
-After evaluating our models and trying to improve our best performing model, we have a model with an accuracy score of around 98%.  Using this model the top five features Lending Club should be concerned with when considering if a potential borrower will repay their loan or not are the following:
+After evaluating our models and trying to improve our best performing model, we have a model with an accuracy score of around 98%.  
 </p>
+
+<p style="text-align: left;"> 
+According to our best performing model:
+</p>
+<ul>
+  <li>The true positive rate is 85% (10,648/12,500)</li>
+  <li>The true negative rate is 13% (1,654/12,500)</li>
+  <li>The false positive rate is 1% (171/12,500)</li>
+  <li>The false negative rate is .21% (26/12,500)</li>
+</ul>
+
+<p style="text-align: left;"> 
+Considering that the objective of this project is to find the best features to use when determining if a borrower will pay their loan in full, the false positive rate is important. It would be more damaging for the project, to predict that a borrower will repay their loan but they actually don't repay.  This model had 171 FP predictions which was the lowest for any of our models.   
+</p>
+
+## Recommendations
+
+<p style="text-align: left;"> 
+Using our best performing model the top five features Lending Club should be concerned with when considering if a potential borrower will repay their loan or not are the following:
+</p>
+<ul>
   <li>Is the loan term 60 months?</li>
   <li>Consider the amount currently committed to the loan.</li>
   <li>Consider the monthly payment for the loan.</li>
   <li>Consider the payments recieved so far for the loan.</li>
   <li>Consider the last amount recieved as a payment.</li>
+</ul>
   
 ## Next Steps
 
